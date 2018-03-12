@@ -1,0 +1,114 @@
+/* en modules se guardan las páginas concretas de la web,
+en este caso todo lo que afecta a la cabecera. Los valores de header son comunes
+en todos los enlaces, salvo que otra orden interfiera, como por ejemplo, en project-detail.less */
+.header {
+    &:extend(.wrapper);
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-top: 2em;
+    padding-bottom: 1em;
+
+    a {
+        text-decoration: none;
+        color: @color-main;
+        transition: ease-in-out all 250ms;
+        span {
+            display: none;
+        }
+         &:hover {
+            opacity: .3;
+         }
+    }
+}
+
+.logo {
+    margin: 0;
+    margin-bottom: .5em;
+    margin-top: 2px;
+    a {
+        display: block;
+        width: 140px;
+        height: 12px;
+        transition: ease-in-out all 250ms;
+        @media (min-width: @screen-s) {
+            width: 250px;
+            height: 21px;
+        }
+        background-image: url('/img/header/logo.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.description {
+    font-weight: 300;
+    letter-spacing: .2em;
+    margin: 0;
+    .font-size(11);
+    @media (min-width: @screen-s) {
+        .font-size(12);
+    }
+}
+
+/* cualquier cambio en la cabecera del index, como por ejemplo añadir otra red
+social u otro enlace tipo "works" debe pasar por aquí */
+.menu {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+    }
+    li {
+        margin-left: .5em;
+        .font-size(13);
+        transition: ease-in-out all 250ms;
+        @media (min-width: @screen-s) {
+            margin-left: 1em;
+        }
+
+
+        &:first-child {
+            a {
+
+                 &:hover {
+                    opacity: .5;
+                 }
+            }
+            &:after {
+                content: "|";
+                margin-left: .5em;
+            }
+        }
+        &.face a,
+        &.insta a,
+        &.linkedin a {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-size: 100%;
+            @media (min-width: @screen-s) {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        &.face a {
+            background-image: url('/img/header/facebook.svg');
+        }
+
+        &.insta a {
+            background-image: url('/img/header/instagram.svg');
+        }
+
+        &.linkedin a {
+            background-image: url('/img/header/linkedin.svg');
+        }
+    }
+}

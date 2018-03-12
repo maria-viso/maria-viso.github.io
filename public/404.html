@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Error 404. Página no encontrada</title>
+
+        <!-- Mobile viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="icon" sizes="16x16" href="/favicon.ico">
+     
+        <!-- CSS-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet">
+        <style type="text/css">
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            body {
+              height: 95vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .error {
+              font-size: 14px;
+              font-size: 0.875rem;
+              padding-top: 3em;
+              padding-bottom: 3em;
+            }
+            .error ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              margin-bottom: 3em;
+              font-weight: 300;
+            }
+            .error ul li {
+              margin-bottom: .5em;
+            }
+            .error ul li:first-child {
+              font-size: 40px;
+            }
+            .error ul li:nth-child(2) {
+              text-transform: uppercase;
+            }
+            .error ul li:last-child {
+              margin-top: 2em;
+            }
+            .error a {
+              color: #c4b5ae;
+              text-decoration: none;
+            }
+            .error a:hover {
+              color: #252525;
+            }
+            @media (min-width: 769px) {
+              .error {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+              }
+            }
+            .error-img {
+              margin-bottom: 2em;
+              max-width: 320px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .error-img img {
+              width: auto;
+              max-width: 100%;
+            }
+            @media (min-width: 769px) {
+              .error-img {
+                -webkit-transform: translateX(-20%);
+                        transform: translateX(-20%);
+                max-width: auto;
+                margin-left: 0;
+                margin-right: 0;
+              }
+              .error-img img {
+                max-width: 360px;
+              }
+            }
+            .error-info {
+              padding-left: 1em;
+              padding-right: 1em;
+              text-align: center;
+
+              
+                font-family: 'Roboto Mono', monospace;
+            }
+            @media (min-width: 769px) {
+              .error-info {
+                -webkit-transform: translateX(10%);
+                        transform: translateX(10%);
+                -ms-flex-item-align: end;
+                    align-self: flex-end;
+                padding-bottom: 12em;
+              }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="error">
+            <div class="error-img">
+                <img src="/img/list/not-found.gif" alt="autorretrato">
+            </div>
+            <div class="error-info">
+                <ul>
+                    <li>404</li>
+                    <li>This is not the page that you're looking for</li>
+                    <li>Move along, move along to <a href="#">www.mariaviso.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

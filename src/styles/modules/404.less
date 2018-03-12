@@ -1,0 +1,84 @@
+/* ==========================================================================
+   ERROR 404
+   ========================================================================== */
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+    .font-size(14);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 3em;
+        font-weight: 300;
+        li {
+            margin-bottom: .5em;
+            &:first-child {
+                font-size: 40px;
+            }
+            &:nth-child(2) {
+                text-transform: uppercase;
+            }
+            &:last-child {
+                margin-top: 2em;
+            }
+        }
+    }
+    a {
+        color: @color-alt-dark;
+        text-decoration: none;
+        &:hover {
+            color: @color-main;
+        }
+    }
+
+    @media (min-width: @screen-m) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.error-img {
+    margin-bottom: 2em;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+        width: auto;
+        max-width: 100%;
+    }
+    @media (min-width: @screen-m) {
+        transform: translateX(-20%);
+        max-width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        img {
+            max-width: 360px;
+        }
+    }
+}
+
+.error-info {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    @media (min-width: @screen-m) {
+        transform: translateX(10%);
+        align-self: flex-end;
+        padding-bottom: 12em;
+    }
+}

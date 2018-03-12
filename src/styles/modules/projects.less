@@ -1,0 +1,251 @@
+/* estilos para la el body de la página principal. Eso implica las imágenes de fondo y
+la lista de proyectos a modo de vista previa. La colocación de estos últimos es arbitraria. */
+.img-back {
+    //transform: translateY(40px);
+    height: 90vh;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >div {
+        @media (min-width: @screen-m) {
+            transform: translateY(-30px);
+        }
+    }
+    img{
+        display: block;
+        margin-bottom: 2em;
+        width: 100%;
+        max-width: 650px;
+    }
+
+
+    @media (min-width: @screen-s) and (max-width: 700px) {
+        >div {
+            transform: translateY(-35px);
+        }
+        img {
+            max-width: 200px;
+        }
+    }
+    /* end es la imagen del final de la página home 
+    &.end {
+        >div {
+        }
+    }
+    */
+
+    .arrow {
+        height: 25px;
+        width: 70px;
+        display: block;
+        margin: 0 auto;
+        background-size: 100%;
+        &.rotate {
+            transform: rotate(180deg) translateY(10px);
+        }
+        path {
+            stroke: @color-alt-dark;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 4;
+            fill: none;
+        }
+    }
+}
+
+
+.projects {
+    &:extend(.wrapper-large);
+   
+    padding-top: 3em;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        h2 {
+            .font-size(14);
+            font-weight: 400;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: @color-main;
+        }
+        li {
+            margin-bottom: 3em;
+            text-align: center;
+            width: 100%;
+            a {
+                img {
+                    transition: ease-in-out all 250ms;
+                }
+                &:hover {
+                    //background-color: fade(@color-main, 1%);
+                    img {
+                        transform: scale(.95);
+                    }
+                    h2 {
+                        color: @color-alt-dark;
+                    }
+                }
+            }
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(12){
+                img {
+                    max-width: 300px;
+                }
+            }
+            &:nth-child(4),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(11){
+                img {
+                    max-width: 250px;
+                }
+            }
+            &:nth-child(8){
+                img {
+                    max-width: 150px;
+                }
+            }
+            
+            /* ipad mini vertical */
+            @media (min-width: @screen-s) {
+                max-width: 35%;
+
+                &:nth-child(1){
+                    max-width: 100%;
+                    a{
+                        max-width: 35%;
+                        transform: translateX(100%);
+                    }
+                }
+                &:nth-child(3){
+                    padding-top: 300px;
+                    transform: translateX(-40%) translateY(-15%);
+                }
+                &:nth-child(4){
+                    transform: translateX(20%) translateY(-35%);
+                }
+                &:nth-child(6){
+                    padding-top: 200px;
+                }
+                &:nth-child(7){
+                    transform: translateX(-35%);
+                }
+                &:nth-child(8){
+                    transform: translateX(60px) translateY(40px);
+                }
+                &:nth-child(10){
+                    padding-top: 250px;
+                    transform: translateX(40%);
+                }
+                &:nth-child(12){
+                    padding-top: 80px;
+                }
+            }
+
+            @media (min-width: @screen-m) {
+                max-width: 35%;
+
+                &:nth-child(1){
+                    max-width: 100%;
+                    /*con "a" se mueve el enlace independientemente del contenedor*/
+                    a{
+                        max-width: 35%;
+                        transform: translateX(80%);
+                    }
+                }
+                &:nth-child(2){
+                    a{
+                        transform: translateY(-40%);
+                    }
+                }
+                &:nth-child(3){
+                    padding-top: 300px;
+                    transform: translateX(0px) translateY(0px);
+                }
+                &:nth-child(4){
+                    transform: translateX(0px) translateY(0px);
+                }
+                &:nth-child(6){
+                    padding-top: 200px;
+                }
+                &:nth-child(7){
+                    transform: translateX(0px) translateY(30%);
+                }
+                &:nth-child(8){
+                    img {
+                        max-width: 170px;
+                    }
+                }
+                &:nth-child(10){
+                    padding-top: 0px;
+                    transform: translateX(0px);
+                }
+                &:nth-child(12){
+                    padding-top: 400px;
+                    transform: translateX(-120%);
+                }
+            }
+            
+            @media (min-width: @screen-l) {
+                max-width: 28%;
+
+                &:nth-child(1){
+                    a{
+                        max-width: 28%;
+                        transform: translateX(160%);
+                    }
+                }
+                &:nth-child(2){
+                    transform: translateX(35%);
+                }
+                &:nth-child(4){
+                    transform: translateX(-30%);
+                }
+
+                &:nth-child(8){
+                    transform: translateX(50%);
+                }
+                &:nth-child(9){
+                    transform: translateX(60%);
+                    padding-top: 100px;
+                }
+                &:nth-child(10){
+                    transform: translateY(550px);     
+                }
+                &:nth-child(11){
+                    transform: translateY(50px);   
+                }
+
+            }
+
+        }
+    }
+
+    // Clase para convertir la imagen en un circulo.
+    // La imagen tiene que ser cuadrada 400x400 px
+
+    .has-circle {
+        img {
+            border-radius: 50%;
+        }
+    }
+}
