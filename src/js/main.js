@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 $(function(){
-    var mq = window.matchMedia( "(min-width: 420px)" );
+    var mq = window.matchMedia( "(min-width: 769px)" );
     // Parallax effect
     var parallax = function($object, time){
         time = time++;
