@@ -174,6 +174,19 @@ y el logo menú y descripcion cambian de opacidad */
                     width: 24%;
                 }
             }
+            &.reduce-portrait {
+                li {
+                    width: 100%;
+                    @media (min-width: @screen-s) {
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 45%;
+                    }
+                    @media (min-width: @screen-m) {
+                        width: 24%;
+                    }
+                }
+            }
         }
         &.gallery-6 {
             display: flex;
