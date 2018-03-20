@@ -87,6 +87,27 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
             margin-bottom: 3em;
             text-align: center;
             width: 100%;
+            /*para el movil*/
+            @media (max-width: @screen-s) {
+                img {
+                    max-width: 230px !important;
+                }
+                &:nth-child(8),
+                &:nth-child(11){
+                    img {
+                        max-width: 100px !important;
+                    }
+                }
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(9),
+                &:nth-child(13){
+                    img {
+                        max-width: 170px !important;
+                    }
+                }
+
+            }
             a {
                 img {
                     transition: ease-in-out all 250ms;
@@ -169,6 +190,9 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
                     padding-top: 250px;
                     transform: translateX(-30%);
                 }
+                &:nth-child(14){
+                    transform: translateX(30%) translateY(-20%);
+                }
             }
 
             @media (min-width: @screen-m) {
@@ -214,7 +238,11 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
                 }
                 &:nth-child(13){
                     padding-top: 550px;
-                    transform: translateX(-80%); 
+                    transform: translateX(-70%); 
+                }
+                &:nth-child(14){
+                    transform: translateX(50%);
+                    margin-top: -20%;
                 }
             }
             
