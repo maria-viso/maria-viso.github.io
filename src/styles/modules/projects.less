@@ -32,7 +32,7 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
     /* end es la imagen del final de la página home */ 
     &.end {
             @media (min-width: @screen-m) {
-                padding-top: 5em;
+                padding-top: 10em;
             }
     }
     
@@ -128,15 +128,16 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
             &:nth-child(5),
             &:nth-child(9),
             &:nth-child(10),
-            &:nth-child(12){
+            &:nth-child(12),
+            &:nth-child(15){
                 img {
                     max-width: 300px;
                 }
             }
-            &:nth-child(4),
             &:nth-child(6),
             &:nth-child(7),
-            &:nth-child(11){
+            &:nth-child(11),
+            &:nth-child(16){
                 img {
                     max-width: 250px;
                 }
@@ -144,6 +145,11 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
             &:nth-child(13){
                 img {
                     max-width: 220px;
+                }
+            }
+            &:nth-child(4){
+                img {
+                    max-width: 180px;
                 }
             }
             &:nth-child(8){
@@ -192,6 +198,12 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
                 }
                 &:nth-child(14){
                     transform: translateX(30%) translateY(-20%);
+                }
+                &:nth-child(15){
+                    transform: translateY(40%);
+                }
+                &:nth-child(16){
+                    transform: translateX(40%);
                 }
             }
 
@@ -244,6 +256,12 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
                     transform: translateX(50%);
                     margin-top: -290px;
                 }
+                &:nth-child(15){
+                    transform: translateX(-400px) translateY(-20%);
+                }
+                &:nth-child(16){
+                    transform: translateX(-100px) translateY(20%);
+                }
             }
             
             @media (min-width: @screen-l) {
@@ -274,6 +292,14 @@ la lista de proyectos a modo de vista previa. La colocación de estos últimos e
                 }
                 &:nth-child(11){
                     transform: translateY(50px);   
+                }
+                &:nth-child(14){
+                    a{
+                        max-width: 80%;
+                    }
+                }
+                &:nth-child(15){
+                    transform: translateX(-600px) translateY(40%);
                 }
 
             }

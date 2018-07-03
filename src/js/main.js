@@ -16,5 +16,6 @@ $(function(){
         parallax($(".projects li:nth-child(2)"), .15);
         parallax($(".projects li:nth-child(7)"), -.25);
         parallax($(".projects li:nth-child(12)"), -.10);
+        parallax($(".projects li:nth-child(15)"), .10);
     }
 });
